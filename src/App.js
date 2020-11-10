@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+
+const AppRoot = styled.div`
+  height: 100vh;
+  background-color: #101010;
+`;
+
+const GreetingsDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+`;
+
+const GreetingsText = styled.h1`
+  font-size: 6.4rem;
+  font-family: "Frijole", cursive;
+  color: #68c3eb;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppRoot className="App">
+      <GreetingsDiv>
+        <GreetingsText>Chill</GreetingsText>
+      </GreetingsDiv>
+    </AppRoot>
   );
 }
 
