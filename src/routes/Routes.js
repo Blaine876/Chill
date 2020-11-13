@@ -5,15 +5,17 @@ import { Route, Switch } from "react-router-dom";
 import Home from "../pages/Home";
 import Splash from "../pages/Splash";
 import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
 
 const Routes = () => {
   return (
     <Switch>
+      <Route component={Login} path="/login" />
+      <Route component={SignUp} path="/signup" />
       <Route exact component={Splash} path="/" />
       <Route component={Profile} path="/profile" />
       <Route component={Home} path="/home" />
-      <Route component={Login} path="/login" />
     </Switch>
   );
 };
