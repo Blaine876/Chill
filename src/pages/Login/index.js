@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link, useHistory } from "react-router-dom";
+
 import Button from "../../components/Button";
 import chillLogo from "../../assets/images/chillLogo.svg";
-import { Link } from "react-router-dom";
+
 const LoginContainer = styled.div`
   height: 100vh;
   background-color: ${({ theme }) => theme.background.primary.dark};
@@ -14,6 +16,7 @@ const LoginForm = styled.form`
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+  padding: 1rem;
 `;
 
 const LoginMain = styled.main`
@@ -94,6 +97,9 @@ const LoginInputField = styled.input`
 `;
 
 const FormDiv = styled.div`
+  background-color: #1a1a1a;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
   @media screen and (min-width: ${({ theme }) =>
       theme.mobile.sm}) and (max-width: ${({ theme }) => theme.mobile.md}) {
     width: 100%;
@@ -121,6 +127,7 @@ const LoginLink = styled(Link)`
 `;
 
 const Login = () => {
+  const history = useHistory();
   return (
     <LoginContainer>
       <LoginMain>
@@ -137,7 +144,11 @@ const Login = () => {
               <LoginInputField type="password" placeholder="Password" />
             </InputDiv>
 
-            <Button buttonText="Login" type="submit" />
+            <Button
+              buttonText="Login"
+              type="submit"
+              onClick={() => history.push("/profile")}
+            />
           </FormDiv>
         </LoginForm>
         <LoginText>
