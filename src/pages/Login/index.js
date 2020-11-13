@@ -21,7 +21,6 @@ const LoginMain = styled.main`
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-
   width: 100%;
 `;
 
@@ -59,6 +58,16 @@ const InputDiv = styled.div`
   justify-content: center;
   padding: 0.5rem 1rem;
   width: 100%;
+
+  /* @media screen and (min-width: ${({ theme }) =>
+    theme.mobile.md}) and (max-width: ${({ theme }) => theme.mobile.lg}) {
+    width: 40rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) =>
+    theme.mobile.lg}) and (max-width: ${({ theme }) => theme.mobile.xl}) {
+    width: 50rem;
+  } */
 `;
 
 const LoginInputField = styled.input`
@@ -72,12 +81,27 @@ const LoginInputField = styled.input`
       theme.mobile.sm}) and (max-width: ${({ theme }) => theme.mobile.md}) {
     width: 100%;
   }
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.mobile.md}) and (max-width: ${({ theme }) => theme.mobile.lg}) {
+    width: 40rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.mobile.lg}) and (max-width: ${({ theme }) => theme.mobile.xl}) {
+    width: 50rem;
+  }
 `;
 
 const FormDiv = styled.div`
   @media screen and (min-width: ${({ theme }) =>
       theme.mobile.sm}) and (max-width: ${({ theme }) => theme.mobile.md}) {
     width: 100%;
+  }
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.mobile.md}) and (max-width: ${({ theme }) => theme.mobile.lg}) {
+    width: 40rem;
   }
 `;
 
